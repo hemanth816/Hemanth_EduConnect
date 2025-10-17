@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit()">
+    <label>Enter your name</label>
+    <input type="text" name="s_name" [(ngModel)]="student.fullName">
+    <label>Enter your Date of Birth</label>
+    <input type="text" name="s_dob" [(ngModel)]="student.dateOfBirth">
+    <label>Enter your contact number</label>
+    <input type="text" name="s_number" [(ngModel)]="student.contactNumber">
+    <label>Enter your email</label>
+    <input type="text" name="s_email" [(ngModel)]="student.email">
+    <label>Enter your address</label>
+    <input type="text" name="s_address" [(ngModel)]="student.address">
+    <button id="s_btnsubmit" type="submit">Submit</button>
+    <button id="s_btnreset" (click)="resetForm()">Reset</button>
+
+    <p *ngIf="successMessage" class="success-message">{{successMessage}}</p>
+    <p *ngIf="errorMessage" class="error-message">{{errorMessage}}</p>
+</form>

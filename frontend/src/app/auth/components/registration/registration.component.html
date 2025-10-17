@@ -1,0 +1,19 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <input formControlName="username" placeholder="Username">
+    <input formControlName="email" placeholder="Email">
+    <input type="password" formControlName="password" placeholder="Password">
+    <input formControlName="role" placeholder="Role">
+
+    <input formControlName="fullName" placeholder="Full Name">
+    <input formControlName="contactNumber" placeholder="Contact Number">
+    <input formControlName="subject" placeholder="Subject">
+    <input formControlName="yearsOfExperience" type="number" placeholder="Years of Experience">
+    <input formControlName="dateOfBirth" type="date" placeholder="Date of Birth">
+    <textarea formControlName="address" placeholder="Address"></textarea>
+
+
+    <button type="submit">Login</button>
+
+    <div *ngIf="errorMessage" class="error">{{errorMessage}}</div>
+    <div *ngIf="successMessage" class="success">{{successMessage}}</div>
+</form>
